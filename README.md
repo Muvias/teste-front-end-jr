@@ -17,3 +17,6 @@ npm install
 ```bash
 npm run dev
 ```
+
+4. Devido a exigência do projeto ser pixel a pixel, é conveniente que ajuste o tamanho do navegador para 1440px de largura para melhor aproveitamento.
+
