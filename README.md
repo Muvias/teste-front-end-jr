@@ -1,7 +1,7 @@
 # Teste Econverse: Vaga Desenvolvedor Front-End Jr
 > Status: concluído.
 
-Desafio Front-End Jr. Econverse concluído. O projeto consiste em desenvolver o layout proposto no figma, consumindo as informações da API fornecida para a exebição na vitrine do carrossel, tendo uma modal com as informações do item escolhido.
+Desafio Front-End Jr. Econverse concluído. O projeto consiste em desenvolver o layout proposto no figma, consumindo as informações da API fornecida para a exibição na vitrine do carrossel, tendo uma modal com as informações do item escolhido.
 
 ## Instruções para rodar o projeto
 
