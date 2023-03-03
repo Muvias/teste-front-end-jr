@@ -1,0 +1,106 @@
+.modalBackground {
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.54);
+
+    z-index: 9999;
+
+    .modalContainer {
+        position: relative;
+
+        display: flex;
+
+        gap: 87px;
+
+        width: 769px;
+        height: 299px;
+        
+        padding: 56.48px 51px 50.58px 56px;
+        
+        background-color: white;
+
+        .boxImage {
+            width: 247px;
+            height: 192px;
+
+            img {
+                width: 247px;
+                height: 192px;
+                object-fit: cover;
+            }
+        }
+
+        .modalTextContainer {
+            width: 328px;
+
+            h1 {
+                font-size: 20px;
+                font-weight: 400;
+                font-family: 'Lato', sans-serif;
+
+                letter-spacing: 0.05em;
+
+                margin-bottom: 21px;
+
+                text-transform: uppercase;
+
+                color: #041E50;
+            }
+
+            span {
+                font-size: 20px;
+                font-weight: 900;
+                font-family: 'Lato', sans-serif;
+
+                letter-spacing: 0.05em;
+
+                color: #041E50;
+            }
+
+            p {
+                font-size: 10px;
+                font-weight: 400;
+                font-family: 'Lato', sans-serif;
+
+                letter-spacing: 0.05em;
+
+                margin-top: 17px;
+                margin-bottom: 25px;
+
+
+                color: #222222;
+            }
+
+            a {
+                font-size: 12px;
+                font-weight: 400;
+                font-family: 'Lato', sans-serif;
+
+                letter-spacing: 0.05em;
+
+
+                color: #041E50;
+            }
+        }
+
+        .iconClose {
+            position: absolute;
+            top: 16px;
+            right: 31px;
+
+            cursor: pointer;
+
+            color: #707070;
+        }
+    }
+}

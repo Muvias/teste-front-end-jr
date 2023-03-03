@@ -1,12 +1,13 @@
 import axios from 'axios';
 
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useQuery } from 'react-query';
 
 import left from '../assets/left.svg';
 import right from '../assets/right.svg';
 
 import '../styles/carousel.scss';
+import { Modal } from './Modal';
 
 export function Carousel() {
     const carousel = useRef(null);
@@ -14,12 +15,27 @@ export function Carousel() {
     const rightArrow = useRef(null);
     const count = useRef(0);
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [image, setImage] = useState("");
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [price, setPrice] = useState(0);
+
     async function getIphonesDatas() {
         return await axios.get('https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json').then(res => res.data.products);
     }
 
     const { data, isLoading } = useQuery('iphonesDatas', getIphonesDatas, { staleTime: 10 * (60 * 1000), });
 
+    // desativa o scroll quando a modal está aberta;
+    useEffect(() => {
+        if (isModalOpen) {
+            document.body.style.overflow = 'hidden';
+          } else {
+            document.body.style.overflow = 'unset';
+          }
+     }, [isModalOpen]);
+    
     function handleLeftClick(e) {
         e.preventDefault();
         carousel.current.scrollLeft -= carousel.current.offsetWidth;
@@ -64,6 +80,19 @@ export function Carousel() {
         }
     };
 
+    function handleOpenModal(image, title, description, price) {
+        setImage(image);
+        setTitle(title);
+        setDescription(description);
+        setPrice(price);
+
+        setIsModalOpen(true);
+    };
+
+    function handleCloseModal() {
+        setIsModalOpen(false);
+    };
+
     return (
         <>
             {isLoading ? <p>carregando...</p> :
@@ -77,7 +106,7 @@ export function Carousel() {
                                 <span className='priceWithDiscount'>R$ {(iphone.price - (iphone.price * 0.0648)).toFixed(2).replace('.', ',')}</span>
                                 <p className='parcels'>ou 2x de {(iphone.price/2).toFixed(2).replace('.', ',')} sem juros</p>
                                 <span className='shipping'>Frete grátis</span>
-                                <button>COMPRAR</button>
+                                <button onClick={() => handleOpenModal(iphone.photo, iphone.productName, iphone.descriptionShort, iphone.price)}>COMPRAR</button>
                             </div>
                         ))}
                     </div>
@@ -90,6 +119,10 @@ export function Carousel() {
                             <img ref={rightArrow} src={right} alt="seta para direita" />
                         </button>
                     </div>
+
+                    {isModalOpen && (
+                        <Modal image={image} title={title} description={description} price={price} closeModal={handleCloseModal} />
+                    )}
                 </div>
             }
         </>
