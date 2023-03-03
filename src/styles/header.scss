@@ -1,0 +1,129 @@
+$text-primary-color: rgba(159, 159, 159, 1);
+$text-second-color: rgba(247, 25, 99, 1);
+$line-color: rgba(240, 240, 240, 1);
+
+header {
+    width: 1280px;
+    margin: 0 auto;
+
+    .purchaseInfos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 6px 0;
+
+        border-bottom: 1px solid $line-color;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+
+            font-size: 12px;
+            font-weight: 500;
+
+            color: $text-primary-color;
+
+            &:first-of-type {
+                margin-left: 262px;
+            }
+
+            &:last-of-type {
+                margin-right: 254px;
+            }
+
+            span {
+                color: $text-second-color;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0 56px;
+
+        border-bottom: 1px solid $line-color;
+
+        form {
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            margin: 12px 0;
+
+            input {
+                width: 657px;
+                height: 48px;
+                padding: 0 24px;
+                border-radius: 10px;
+                border: none;
+
+                font-size: 14px;
+                font-weight: 500;
+
+                background-color: #F6F5F2;
+
+                &::placeholder {
+                    color: $text-primary-color;
+                }
+            }
+
+            img {
+                position: absolute;
+                right: 16px;
+            }
+        }
+
+        div {
+            width: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                width: 24px;
+            }
+        }
+    }
+
+    .categories {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 91px;
+
+        padding: 11px 0;
+
+        box-shadow: 0px 8px 16px rgba(57, 48, 19, 0.12);
+
+        a {
+            font-size: 12px;
+            font-weight: 600;
+            color: $text-primary-color;
+            line-height: 18px;
+
+            &.active {
+                color: $text-second-color;
+            }
+
+            &:last-of-type {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                gap: 12px;
+
+                &.active img {
+                    background-color: filter($text-second-color);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.marks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+
+    gap: 52px;
+
+    width: 1250px;
+
+    margin: 155px auto 89px auto;
+
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+
+        color: rgba(247, 25, 99, 1);
+    }
+
+    div {
+        display: flex;
+        gap: 40px;
+
+        width: 1250px;
+
+        padding: 8px;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 211px;
+            height: 211px;
+
+            border-radius: 100%;
+
+            box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.13)
+        }
+    }
+
+    .markArrow {
+        position: absolute;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 56px;
+        height: 56px;
+
+        right: 42px;
+        top: 57%;
+
+        border-radius: 100%;
+
+        background-color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.18);
+
+        cursor: pointer;
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.bannerContainer {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 395px;
+    }
+
+    .cover {
+        position: absolute;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+
+        opacity: 0.8;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 85.04%);
+    }
+
+    .textContainer {
+        position: absolute;
+        top: 0;
+        height: 100%;
+
+        padding: 52px 89px;
+
+        h1 {
+            width: 622px;
+
+            font-size: 48px;
+            font-weight: 600;
+
+            color: white;
+        }
+
+        p {
+            font-size: 36px;
+            font-weight: 600;
+
+            color: white;
+        }
+
+        a {
+            display: inline-block;
+            width: 227px;
+            height: 60px;
+
+            padding: 16px 55px;
+
+            font-size: 18px;
+            font-weight: 600;
+
+            margin-top: 35px;
+
+            border: none;
+            border-radius: 5px;
+
+            color: white;
+            background-color: rgba(247, 25, 99, 1);
+
+            transition: 0.2s;
+
+            &:hover {
+                filter: brightness(0.9);
+            }
+        }
+    }
+}

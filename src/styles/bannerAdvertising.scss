@@ -1,0 +1,76 @@
+.AdvertisingBannerContainer {
+    display: flex;
+    gap: 105px;
+
+    width: 1269px;
+
+    margin: 0 auto 60px auto;
+
+    .bannerContainer {
+        width: 574px;
+        height: 350px;
+
+        img {
+            width: 574px;
+            height: 350px;
+
+            border-radius: 20px;
+        }
+
+        .cover {
+            border-radius: 20px;
+        }
+
+        .textAdvContainer {
+            position: absolute;
+
+            bottom: 0;
+
+            padding: 40px;
+
+            h3 {
+                font-size: 40px;
+                font-weight: 700;
+
+                margin-bottom: 8px;
+
+                color: white;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+
+                width: 181px;
+
+                margin-bottom: 32px;
+
+                color: white;
+            }
+
+            a {
+                width: 131px;
+                height: 48px;
+
+                padding: 12px 24px;
+
+                font-size: 16px;
+                font-weight: 900;
+
+                margin-top: 35px;
+
+                border: none;
+                border-radius: 10px;
+
+                color: white;
+                background-color: rgba(247, 25, 99, 1);
+
+                transition: 0.2s;
+
+                &:hover {
+                    filter: brightness(0.9);
+                }
+            }
+        }
+    }
+}

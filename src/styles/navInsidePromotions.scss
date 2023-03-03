@@ -1,0 +1,50 @@
+.navPromotionsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 53px;
+
+    height: 174px;
+
+    margin: 34px 86px;
+
+    a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        gap: 22px;
+
+        font-size: 16px;
+        font-weight: 500;
+
+        color: rgba(78, 78, 78, 1);
+        
+        // o certo seria essas duas propriedades seguintes serem ao estar ativo, igual foi feito no componente Header.
+        &:first-of-type,
+        &:first-of-type div  {
+            color: rgba(247, 25, 99, 1);
+            background-color: #fff;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 128px;
+            height: 128px;
+
+            border-radius: 10px;
+
+            box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.22);
+
+            background-color: #f4f4f4;
+
+            img {
+                width: 61px;
+                height: 61px;
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+.carouselContainer {
+    width: 1266px;
+    height: 500px;
+
+    margin: 0 auto 71px auto;
+
+    position: relative;
+
+
+    .carousel {
+        display: flex;
+
+        gap: 62px;
+
+        width: 100%;
+        padding: 5px;
+
+        overflow-x: scroll;
+
+        scroll-behavior: smooth;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+            width: 270px;
+
+            padding: 17px 12px;
+
+            border-radius: 10px;
+
+            background-color: #fff;
+
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.22);
+
+            img {
+                margin-top: 10px;
+            }
+
+            .description {
+                font-size: 15px;
+                font-weight: 300;
+
+                margin-top: 9px;
+
+                color: rgba(63, 63, 64, 1);
+            }
+
+            .fullPrice {
+                font-size: 16px;
+                font-weight: 400;
+
+                margin-top: 12px;
+
+                text-decoration-line: line-through;
+                color: rgba(128, 128, 128, 1);
+            }
+
+            .priceWithDiscount {
+                font-size: 20px;
+                font-weight: 700;
+
+                margin-top: 2px;
+
+                color: rgba(63, 63, 64, 1);
+            }
+
+            .parcels {
+                font-size: 12px;
+                font-weight: 400;
+
+                margin-top: 2px;
+
+                color: rgba(63, 63, 64, 1);
+            }
+
+            .shipping {
+                font-size: 12px;
+                font-weight: 400;
+
+                margin: 7px 0 12px 0;
+
+                color: rgba(247, 25, 99, 1);
+            }
+
+            button {
+                width: 245px;
+                height: 44px;
+
+                font-size: 14px;
+                font-weight: 700;
+
+                border: none;
+                border-radius: 4px;
+
+                cursor: pointer;
+
+                color: #fff;
+                background-color: rgba(247, 25, 99, 1);
+
+                transition: 0.2s;
+
+                &:hover {
+                    filter: brightness(0.9);
+                }
+            }
+        }
+    }
+
+    .arrows {
+        button {
+            position: absolute;
+
+            top: 45%;
+
+            cursor: pointer;
+
+            border: none;
+            background-color: transparent;
+
+            &:active {
+                transform: scale(1.03);
+            }
+        }
+
+        .arrowLeft {
+            left: -55px;
+        }
+
+        .arrowRight {
+            right: -55px;
+        }
+    }
+}
